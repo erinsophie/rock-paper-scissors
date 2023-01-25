@@ -14,13 +14,12 @@ function getComputerChoice() {
 
 
 // This function plays a single round and returns a string announcing the winner
-// playerSelection is rendered case insensitive
 
 function playRound(playerSelection, computerSelection) {
       
      if (playerSelection === "rock" && computerSelection === "Paper") {
         computerScore ++;
-        return `You lose! Paper beats Rock! You: ${playerScore} Computer: ${computerScore}`;
+        return (`You lose! Paper beats Rock! You: ${playerScore} Computer: ${computerScore}`);
     } else if (playerSelection === "rock" && computerSelection === "Scissors") {
         playerScore ++;
         return `You win! Rock beats Scissors You: ${playerScore} Computer: ${computerScore}`;
@@ -41,14 +40,22 @@ function playRound(playerSelection, computerSelection) {
     }
   }
 
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-let result = playRound(playerSelection, computerSelection);
-console.log("Computer chose: " + computerSelection);
-console.log(result);
 
 
 // function to play 5 rounds 
+// playerSelection is rendered case insensitive
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+    const playerSelection = prompt("Choose: rock, paper, or scissors:");
+    const computerSelection = getComputerChoice();
+    let result = playRound(playerSelection, computerSelection);
+    console.log("Computer chose: " + computerSelection);
+    console.log(result);
+    }
+}
+
+console.log(game())
 
 
 
