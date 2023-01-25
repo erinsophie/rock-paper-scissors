@@ -37,9 +37,8 @@ function playRound(playerSelection, computerSelection) {
         return `You lose! Rock beats scissors You: ${playerScore} Computer: ${computerScore}`;
     } else {
         return `It's a tie! You both chose ${playerSelection}. You: ${playerScore} Computer: ${computerScore}`;
-    }
   }
-
+};
 
 
 // function to play 5 rounds 
@@ -47,29 +46,23 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
     for (let i = 0; i < 5; i++) {
-    const playerSelection = prompt("Choose: rock, paper, or scissors:");
+    let playerSelection = prompt("Choose: Rock, Paper, or Scissors:");
     const computerSelection = getComputerChoice();
     let result = playRound(playerSelection, computerSelection);
+    playerSelection = playerSelection.toLowerCase()
     console.log("Computer chose: " + computerSelection);
     console.log(result);
     }
-}
+
+    if (playerScore > computerScore) {
+        return `Game Over Congratulations! You won! Final Scores: You: ${playerScore} Computer: ${computerScore}`;
+    } else if (playerScore < computerScore) {
+        return `Game Over Oh no! You lost! Final Scores: You: ${playerScore} Computer: ${computerScore}`;
+    } else {
+        return `Game Over It's a tie! Try again. Scores: ${playerScore} Computer: ${computerScore}`;
+    }
+};
 
 console.log(game())
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
