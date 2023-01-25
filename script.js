@@ -1,7 +1,7 @@
 // define scores at 0
 
-let playerScore = 0
-let computerScore = 0
+let playerScore = 0;
+let computerScore = 0;
 
 // This function generates a random option from the array choices
 
@@ -19,33 +19,39 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection) {
       
      if (playerSelection === "rock" && computerSelection === "Paper") {
-        return "You lose! Paper beats Rock!";
+        computerScore ++;
+        return `You lose! Paper beats Rock! You: ${playerScore} Computer: ${computerScore}`;
     } else if (playerSelection === "rock" && computerSelection === "Scissors") {
-        return "You win! Rock beats Scissors"
+        playerScore ++;
+        return `You win! Rock beats Scissors You: ${playerScore} Computer: ${computerScore}`;
     } else if (playerSelection === "paper" && computerSelection === "Rock") {
-         return "You lose! Rock beats Paper"
+         computerScore ++;
+        return `You lose! Rock beats Paper You: ${playerScore} Computer: ${computerScore}`;
     } else if (playerSelection === "paper" && computerSelection === "Scissors") {
-        return "You lose! Scissors cut Paper"
+        computerScore ++;
+        return `You lose! Scissors cut Paper You: ${playerScore} Computer: ${computerScore}`;
     } else if (playerSelection === "scissors" && computerSelection === "Paper") {
-        return "You win! Scissors cut Paper"
+        playerScore ++;
+        return `You win! Scissors cut Paper You: ${playerScore} Computer: ${computerScore}`;
     } else if (playerSelection === "scissors" && computerSelection === "Rock") {
-        return "You lose! Rock beats scissors"
+        computerScore ++;
+        return `You lose! Rock beats scissors You: ${playerScore} Computer: ${computerScore}`;
     } else {
-        return `It's a tie! You both chose ${playerSelection}`
+        return `It's a tie! You both chose ${playerSelection}. You: ${playerScore} Computer: ${computerScore}`;
     }
   }
 
-  let result = playRound(playerSelection, computerSelection);
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+let result = playRound(playerSelection, computerSelection);
 console.log("Computer chose: " + computerSelection);
-console.log(playRound(playerSelection, computerSelection));
+console.log(result);
 
 
 // function to play 5 rounds 
 
-function game() {
-    for (let i = 0; i < 5; i++) {
-    }
-}
+
+
 
 
 
