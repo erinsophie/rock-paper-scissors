@@ -11,14 +11,12 @@ function getComputerChoice() {
     return choices[randomIndex];
 }
 
-console.log(getComputerChoice())
-
 // write function to play a single round 
 // function takes 2 parameters, playerSelection and computerSelection
 // it returns a string announcing the winner
 
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection === "rock" && computerSelection === "Paper") {
+    if (playerSelection.toLowerCase() === "rock" && computerSelection === "Paper") {
         return "You lose! Paper beats Rock!";
     } else {
         return "Congratulations, you won!";
@@ -28,7 +26,10 @@ function playRound(playerSelection, computerSelection) {
 
 const playerSelection = "rock";
 const computerSelection = getComputerChoice();
+console.log("Computer chose: " + computerSelection);
 console.log(playRound(playerSelection, computerSelection));
+
+
 
 
 
