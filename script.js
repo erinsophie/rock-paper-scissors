@@ -1,8 +1,9 @@
-// The game will play against the computer 
-// Create a function called getComputerChoice 
-// Function will randomly return rock, paper or scissors
-// use Math.random
-// Use console.log to test it works
+// define scores at 0
+
+let playerScore = 0
+let computerScore = 0
+
+// This function generates a random option from the array choices
 
 const choices = ["Rock", "Paper", "Scissors"]
 
@@ -11,16 +12,13 @@ function getComputerChoice() {
     return choices[randomIndex];
 }
 
-// write function to play a single round 
-// function takes 2 parameters, playerSelection and computerSelection
-// it returns a string announcing the winner
+
+// This function plays a single round and returns a string announcing the winner
+// playerSelection is rendered case insensitive
 
 function playRound(playerSelection, computerSelection) {
-    playerSelection = playerSelection.toLowerCase();
       
-    if (playerSelection === computerSelection) {
-        return `It's a tie! Computer chose ${playerSelection}`
-      } else if (playerSelection === "rock" && computerSelection === "Paper") {
+     if (playerSelection === "rock" && computerSelection === "Paper") {
         return "You lose! Paper beats Rock!";
     } else if (playerSelection === "rock" && computerSelection === "Scissors") {
         return "You win! Rock beats Scissors"
@@ -32,13 +30,26 @@ function playRound(playerSelection, computerSelection) {
         return "You win! Scissors cut Paper"
     } else if (playerSelection === "scissors" && computerSelection === "Rock") {
         return "You lose! Rock beats scissors"
+    } else {
+        return `It's a tie! You both chose ${playerSelection}`
     }
   }
-  
-const computerSelection = getComputerChoice();
-const result = playRound(playerSelection, computerSelection);
+
+  let result = playRound(playerSelection, computerSelection);
 console.log("Computer chose: " + computerSelection);
 console.log(playRound(playerSelection, computerSelection));
+
+
+// function to play 5 rounds 
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+    }
+}
+
+
+
+
 
 
 
