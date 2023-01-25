@@ -16,15 +16,25 @@ function getComputerChoice() {
 // it returns a string announcing the winner
 
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection.toLowerCase() === "rock" && computerSelection === "Paper") {
+    playerSelection = playerSelection.toLowerCase();
+      
+    if (playerSelection === computerSelection) {
+        return `It's a tie! Computer chose ${playerSelection}`
+      } else if (playerSelection === "rock" && computerSelection === "Paper") {
         return "You lose! Paper beats Rock!";
-    } else {
-        return "Congratulations, you won!";
+    } else if (playerSelection === "rock" && computerSelection === "Scissors") {
+        return "You win! Rock beats Scissors"
+    } else if (playerSelection === "paper" && computerSelection === "Rock") {
+         return "You lose! Rock beats Paper"
+    } else if (playerSelection === "paper" && computerSelection === "Scissors") {
+        return "You lose! Scissors cut Paper"
+    } else if (playerSelection === "scissors" && computerSelection === "Paper") {
+        return "You win! Scissors cut Paper"
+    } else if (playerSelection === "scissors" && computerSelection === "Rock") {
+        return "You lose! Rock beats scissors"
     }
   }
   
-
-const playerSelection = "rock";
 const computerSelection = getComputerChoice();
 const result = playRound(playerSelection, computerSelection);
 console.log("Computer chose: " + computerSelection);
