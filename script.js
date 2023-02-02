@@ -5,7 +5,7 @@ let computerScore = 0;
 
 //DOM NODES
 
-const optionBtns = document.querySelectorAll('.option-btns');
+const optionBtns = document.querySelectorAll('div.option-btns button');
 const playerPoints = document.querySelector('.player-points');
 const computerPoints = document.querySelector('.computer-points');
 const displayMsg = document.querySelector('.display-message');

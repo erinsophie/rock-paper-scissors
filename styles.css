@@ -1,13 +1,84 @@
 body {
+    border: 1px solid red;
     box-sizing: border-box;
     font-family: 'Press Start 2P', cursive;
-    margin: auto;
-    width: 50%;
+    background-color: #282828;
 }
 
+.content {
+    border: 1px solid red;
+    max-width: px;
+    margin: auto;
+    width: 800px;
+    color: #FFFFFF;
+}
+
+h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 2rem;
+    border: 1px solid red;
+}
 
 .message-container {
+    text-align: center;
+    height: 100px;
     border: 1px solid red;
-    height: 300x;
-    width: 500px;
 }
+
+.computer-chose {
+     color: grey;
+}
+
+.option-btns {
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid red;
+}
+
+.button {
+    height: 80px;
+    width: 120px;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #585858;
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    
+}
+
+.scores-container {
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.player-box, .computer-box {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    width: 250px;
+    background-color: #363636;
+    border-radius: 5px;
+
+}
+
+.play-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.play-again-btn {
+    height: 50px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    background-color: #585858;
+    color: #FFFFFF;
+    font-size: 0.7rem;
+    font-family: 'Press Start 2P', cursive;
+}
+
