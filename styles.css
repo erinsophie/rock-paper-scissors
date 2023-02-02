@@ -12,15 +12,18 @@ body {
 
 h1 {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
     text-align: center;
     font-size: 2rem;
 }
 
 .message-container {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
     text-align: center;
-    padding-top: 10px;
     height: 100px;
+    padding-bottom: 20px;
 }
 
 .computer-chose {
