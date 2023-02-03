@@ -76,7 +76,6 @@ function endGame() {
     optionBtns.forEach(button => { button.removeEventListener('click', getPlayerChoice)});
 }
 
-
 // RESTART GAME 
 
 function playAgain() {
